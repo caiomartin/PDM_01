@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    style="@style/AppTheme">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soma dois Números"
+                android:id="@+id/somaDoisNumeros"
+                android:onClick="openSomaDOisNumeros"
+                style="@style/opcaoMenuBlack"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Área do Triângulo"
+                android:id="@+id/doisjogadores"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/textView2"
+                style="@style/opcaoMenuBlue"
+                android:onClick="openareaDoTriangulo" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Média Notas"
+                android:id="@+id/btnInstrucao"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/textView2"
+                style="@style/opcaoMenuBlack"
+                android:onClick="openMediaTresNotas" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Operações Aritiméticas"
+                android:id="@+id/btnInstrudcao"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/textView2"
+                style="@style/opcaoMenuBlue"
+                android:onClick="openOperacoesAritimeticas" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aliquota do IRgo"
+                android:id="@+id/btnInstrudedcao"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/textView2"
+                style="@style/opcaoMenuBlack"
+                android:onClick="openAliquotaIr" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

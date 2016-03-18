@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.programacaoplus.projetoespecial_" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".somaDoisNumeros"
+            android:label="@string/title_activity_soma_dois_numeros" >
+        </activity>
+        <activity
+            android:name=".areaDoTriangulo"
+            android:label="@string/title_activity_area_do_triangulo" >
+        </activity>
+        <activity
+            android:name=".MediaTresNotas"
+            android:label="@string/title_activity_media_tres_notas" >
+        </activity>
+        <activity
+            android:name=".operacoesAritimeticas"
+            android:label="@string/title_activity_operacoes_aritimeticas" >
+        </activity>
+        <activity
+            android:name=".aliquotaIr"
+            android:label="@string/title_activity_aliquota_ir" >
+        </activity>
+    </application>
+
+</manifest>
