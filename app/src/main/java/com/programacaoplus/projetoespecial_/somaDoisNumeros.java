@@ -1,5 +1,6 @@
 package com.programacaoplus.projetoespecial_;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class somaDoisNumeros extends AppCompatActivity {
 
@@ -31,19 +34,26 @@ public class somaDoisNumeros extends AppCompatActivity {
 
                 TextView res = (TextView) findViewById(R.id.resultado);
 
-                if(verifica(s1,s2)){
+                if (verifica(s1, s2)) {
                     res.setText("Preenche os campos!");
-                }else {
+                } else {
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
-                    int num2 = Integer.parseInt(n2.getText().toString());
+                    double num1 = Double.parseDouble(n1.getText().toString());
+                    double num2 = Double.parseDouble(n2.getText().toString());
 
-                    int soma;
-                    soma = num1 * num2;
-                    res.setText("Soma: " + soma);
+                    double soma;
+                    soma = num1 + num2;
+                    DecimalFormat df = new DecimalFormat("0.0");
+                    res.setText("Soma: " + df.format(soma));
                 }
             }
         });
+    }
+
+
+    public void voltar(View view) {
+        Intent tela = new Intent(this, MainActivity.class);
+        startActivity(tela);
     }
 
     public boolean verifica(String s1, String s2){

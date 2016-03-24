@@ -1,5 +1,6 @@
 package com.programacaoplus.projetoespecial_;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,19 +33,19 @@ public class aliquotaIr extends AppCompatActivity {
 
                 if (verifica(s1)) {
                     res.setText("Preenche os campos!");
-                }else{
+                } else {
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
+                    double num1 = Double.parseDouble(n1.getText().toString());
 
-                    if(num1 < 1903.99){
+                    if (num1 < 1903.99) {
                         res.setText("Isento");
-                    }else if((num1 >= 1903.99) && (num1 < 2826.66)){
+                    } else if ((num1 >= 1903.99) && (num1 < 2826.66)) {
                         res.setText("7,5% do salário bruto");
-                    }else if((num1 >= 2826.66) && (num1 < 3751.06)){
+                    } else if ((num1 >= 2826.66) && (num1 < 3751.06)) {
                         res.setText("15% do salário bruto");
-                    }else if((num1 >= 3751.06) && (num1 < 4664.69)){
+                    } else if ((num1 >= 3751.06) && (num1 < 4664.69)) {
                         res.setText("22,5% do salário bruto");
-                    }else if(num1 >= 4664.69){
+                    } else if (num1 >= 4664.69) {
                         res.setText("27,5% do salário bruto");
                     }
                 }
@@ -58,5 +59,9 @@ public class aliquotaIr extends AppCompatActivity {
             return true;
         else
             return false;
+    }
+    public void voltar(View view) {
+        Intent tela = new Intent(this, MainActivity.class);
+        startActivity(tela);
     }
 }

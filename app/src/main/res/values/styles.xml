@@ -7,7 +7,7 @@
 
 
     <style name="opcaoMenuBlue" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:background">#069</item>
+        <item name="android:background">#024d66</item>
         <item name="android:textColor">#f2f2f2</item>
         <item name="android:layout_marginBottom">5dp</item>
     </style>
@@ -16,6 +16,11 @@
         <item name="android:background">#333</item>
         <item name="android:textColor">#f2f2f2</item>
         <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="inputDecimal">
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:digits">1234567890.</item>
     </style>
 
 </resources>

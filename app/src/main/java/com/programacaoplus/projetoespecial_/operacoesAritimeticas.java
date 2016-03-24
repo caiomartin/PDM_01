@@ -1,5 +1,6 @@
 package com.programacaoplus.projetoespecial_;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,16 +37,16 @@ public class operacoesAritimeticas extends AppCompatActivity {
 
                 TextView res = (TextView) findViewById(R.id.resultado);
 
-                if(verifica(s1,s2)){
+                if (verifica(s1, s2)) {
                     res.setText("Preenche os campos!");
-                }else {
+                } else {
+                    double num1 = Double.parseDouble(n1.getText().toString());
+                    double num2 = Double.parseDouble(n2.getText().toString());
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
-                    int num2 = Integer.parseInt(n2.getText().toString());
-
-                    int soma;
+                    double soma;
                     soma = num1 + num2;
-                    res.setText("Resultado:" + soma);
+                    DecimalFormat df = new DecimalFormat("0.0");
+                    res.setText("Resultado: " + df.format(soma));
                 }
             }
         });
@@ -67,13 +68,13 @@ public class operacoesAritimeticas extends AppCompatActivity {
                 if(verifica(s1,s2)){
                     res.setText("Preenche os campos!");
                 }else {
+                    double num1 = Double.parseDouble(n1.getText().toString());
+                    double num2 = Double.parseDouble(n2.getText().toString());
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
-                    int num2 = Integer.parseInt(n2.getText().toString());
-
-                    int soma;
+                    double soma;
                     soma = num1 - num2;
-                    res.setText("Resultado:" + soma);
+                    DecimalFormat df = new DecimalFormat("0.0");
+                    res.setText("Resultado: " + df.format(soma));
                 }
             }
         });
@@ -96,15 +97,13 @@ public class operacoesAritimeticas extends AppCompatActivity {
                 if(verifica(s1,s2)){
                     res.setText("Preenche os campos!");
                 }else {
-
-                    DecimalFormat df = new DecimalFormat("0.0");
-
                     Double num1 = Double.parseDouble(s1);
                     Double num2 = Double.parseDouble(s2);
 
                     double soma;
                     soma = num1 / num2;
-                    res.setText("Resultado:" + df.format(soma));
+                    DecimalFormat df = new DecimalFormat("0.0");
+                    res.setText("Resultado: " + df.format(soma));
                 }
             }
         });
@@ -126,13 +125,13 @@ public class operacoesAritimeticas extends AppCompatActivity {
                 if(verifica(s1,s2)){
                     res.setText("Preenche os campos!");
                 }else {
+                    double num1 = Double.parseDouble(n1.getText().toString());
+                    double num2 = Double.parseDouble(n2.getText().toString());
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
-                    int num2 = Integer.parseInt(n2.getText().toString());
-
-                    int soma;
+                    double soma;
                     soma = num1 * num2;
-                    res.setText("Resultado:" + soma);
+                    DecimalFormat df = new DecimalFormat("0.0");
+                    res.setText("Resultado: " + df.format(soma));
                 }
             }
         });
@@ -144,6 +143,12 @@ public class operacoesAritimeticas extends AppCompatActivity {
         else
             return false;
     }
+
+    public void voltar(View view) {
+        Intent tela = new Intent(this, MainActivity.class);
+        startActivity(tela);
+    }
+
 }
 
 

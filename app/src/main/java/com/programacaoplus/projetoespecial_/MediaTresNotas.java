@@ -1,5 +1,6 @@
 package com.programacaoplus.projetoespecial_;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -39,9 +40,9 @@ public class MediaTresNotas extends AppCompatActivity {
                     res.setText("Preenche os campos!");
                 } else {
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
-                    int num2 = Integer.parseInt(n2.getText().toString());
-                    int num3 = Integer.parseInt(n3.getText().toString());
+                    double num1 = Double.parseDouble(n1.getText().toString());
+                    double num2 = Double.parseDouble(n2.getText().toString());
+                    double num3 = Double.parseDouble(n3.getText().toString());
 
                     double soma;
 
@@ -58,6 +59,11 @@ public class MediaTresNotas extends AppCompatActivity {
             return true;
         else
             return false;
+    }
+
+    public void voltar(View view) {
+        Intent tela = new Intent(this, MainActivity.class);
+        startActivity(tela);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.programacaoplus.projetoespecial_;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class areaDoTriangulo extends AppCompatActivity {
 
@@ -35,12 +38,13 @@ public class areaDoTriangulo extends AppCompatActivity {
                     res.setText("Preenche os campos!");
                 } else {
 
-                    int num1 = Integer.parseInt(n1.getText().toString());
-                    int num2 = Integer.parseInt(n2.getText().toString());
+                    double num1 = Double.parseDouble(n1.getText().toString());
+                    double num2 = Double.parseDouble(n2.getText().toString());
 
-                    int soma;
+                    double soma;
                     soma = (num1 * num2) / 2;
-                    res.setText("Área: " + soma);
+                    DecimalFormat df = new DecimalFormat("0.00");
+                    res.setText("A área é: " + df.format(soma));
                 }
             }
         });
@@ -51,5 +55,10 @@ public class areaDoTriangulo extends AppCompatActivity {
             return true;
         else
             return false;
+    }
+
+    public void voltar(View view) {
+        Intent tela = new Intent(this, MainActivity.class);
+        startActivity(tela);
     }
 }
