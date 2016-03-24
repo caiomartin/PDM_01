@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">"Trabalho 1 - PDM"</string>
-
+    <string name="app_name">"PDM"</string>
+    <string name="name_activity_main">"Trabalho 01 - PDM"</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="edit_menssage">Digite o numero</string>
