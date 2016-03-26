@@ -68,6 +68,16 @@
                 style="@style/opcaoMenuBlack"
                 android:onClick="openAliquotaIr" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Média dos Pesos"
+                android:id="@+id/btnMediaPesos"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/textView2"
+                style="@style/opcaoMenuBlue"
+                android:onClick="openMediaDosPesos" />
+
         </LinearLayout>
 
     </LinearLayout>

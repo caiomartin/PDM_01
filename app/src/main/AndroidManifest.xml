@@ -6,10 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/name_activity_main" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,23 +19,33 @@
         </activity>
         <activity
             android:name=".somaDoisNumeros"
-            android:label="@string/title_activity_soma_dois_numeros" >
+            android:label="@string/title_activity_soma_dois_numeros"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".areaDoTriangulo"
-            android:label="@string/title_activity_area_do_triangulo" >
+            android:label="@string/title_activity_area_do_triangulo"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".MediaTresNotas"
-            android:label="@string/title_activity_media_tres_notas" >
+            android:label="@string/title_activity_media_tres_notas"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".operacoesAritimeticas"
-            android:label="@string/title_activity_operacoes_aritimeticas" >
+            android:label="@string/title_activity_operacoes_aritimeticas"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".aliquotaIr"
-            android:label="@string/title_activity_aliquota_ir" >
+            android:label="@string/title_activity_aliquota_ir"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".MesdiaDosPesos"
+            android:label="@string/title_activity_mesdia_dos_pesos"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

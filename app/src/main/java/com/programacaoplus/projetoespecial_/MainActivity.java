@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(tela);
     }
 
+    public void openMediaDosPesos(View view) {
+        Intent tela = new Intent(this, MesdiaDosPesos.class);
+        startActivity(tela);
+    }
+
 
 
 

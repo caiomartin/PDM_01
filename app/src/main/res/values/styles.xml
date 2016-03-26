@@ -18,9 +18,27 @@
         <item name="android:layout_marginBottom">5dp</item>
     </style>
 
+    <style name="btnMostrar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">#0075F1</item>
+        <item name="android:textColor">#f2f2f2</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="btnLimpar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">#bebebe</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
     <style name="inputDecimal">
         <item name="android:inputType">numberDecimal</item>
         <item name="android:digits">1234567890.</item>
+    </style>
+
+    <style name="exibeAzul" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">#069</item>
+        <item name="android:textColor">#f2f2f2</item>
+        <item name="android:layout_marginTop">10dp</item>
     </style>
 
 </resources>

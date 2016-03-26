@@ -37,26 +37,31 @@ public class aliquotaIr extends AppCompatActivity {
 
                     double num1 = Double.parseDouble(n1.getText().toString());
 
+                    double soma = 0;
+
                     if (num1 < 1903.99) {
                         res.setText("Isento");
                     } else if ((num1 >= 1903.99) && (num1 < 2826.66)) {
-                        res.setText("7,5% do salário bruto");
+                        soma = soma * 0.075;
+                        res.setText("Resultado: "+soma);
                     } else if ((num1 >= 2826.66) && (num1 < 3751.06)) {
-                        res.setText("15% do salário bruto");
+                        soma = soma * 0.15;
+                        res.setText("Resultado: "+soma);
                     } else if ((num1 >= 3751.06) && (num1 < 4664.69)) {
-                        res.setText("22,5% do salário bruto");
+                        soma = soma * 0.225;
+                        res.setText("Resultado: "+soma);
                     } else if (num1 >= 4664.69) {
-                        res.setText("27,5% do salário bruto");
+                        soma = soma * 0.275;
+                        res.setText("Resultado: "+soma);
                     }
                 }
             }
         });
     }
-
-
     public boolean verifica(String s1){
-        if(s1.equals(""))
+        if(s1.equals("")) {
             return true;
+        }
         else
             return false;
     }
